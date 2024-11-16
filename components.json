@@ -11,10 +11,11 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "~/components",
-    "utils": "~/lib/utils",
-    "ui": "~/components/ui",
-    "lib": "~/lib",
-    "hooks": "~/hooks"
+    "entities": "@entities",
+    "features": "@features",
+    "widgets": "@widgets",
+    "shared": "@shared",
+    "components": "",
+    "utils": ""
   }
 }
