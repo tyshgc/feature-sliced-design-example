@@ -5,11 +5,4 @@ import { createPagesFunctionHandler } from "@remix-run/cloudflare-pages"
 // eslint-disable-next-line import/no-unresolved
 import * as build from "../build/server"
 
-export const onRequest = async (context: any) => {
-  try {
-    return await createPagesFunctionHandler({ build })(context)
-  } catch (error) {
-    console.error("Error in Cloudflare Pages Function:", error)
-    return new Response("Internal Server Error", { status: 500 })
-  }
-}
+export const onRequest = createPagesFunctionHandler({ build })
