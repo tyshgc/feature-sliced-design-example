@@ -55,6 +55,9 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20241112.0
         version: 4.20241112.0
+      '@remix-run/cloudflare-pages':
+        specifier: ^2.14.0
+        version: 2.14.0(@cloudflare/workers-types@4.20241112.0)(typescript@5.6.3)
       '@remix-run/dev':
         specifier: ^2.14.0
         version: 2.14.0(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/node@22.9.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.9.0))(wrangler@3.87.0(@cloudflare/workers-types@4.20241112.0))
@@ -761,6 +764,16 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@remix-run/cloudflare-pages@2.14.0':
+    resolution: {integrity: sha512-3h35TPX3kek2xMKPJAfoBlgV2lLj7/BF3vNVsrPvUSIn1X3fb89U0u0q56b9iu+fv2AatJfPMWurJ88NxyAXVw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@cloudflare/workers-types': ^4.0.0
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@remix-run/cloudflare@2.14.0':
     resolution: {integrity: sha512-X+G5FgCV9vwAtZLivPswimxIpurulZUV4VkIf6Fz3YJorvFd2vJZpzzSZvCNBpJz4sV/NmPGSZ6ZbzJWY1uLTQ==}
@@ -3929,6 +3942,13 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@remix-run/cloudflare-pages@2.14.0(@cloudflare/workers-types@4.20241112.0)(typescript@5.6.3)':
+    dependencies:
+      '@cloudflare/workers-types': 4.20241112.0
+      '@remix-run/cloudflare': 2.14.0(@cloudflare/workers-types@4.20241112.0)(typescript@5.6.3)
+    optionalDependencies:
+      typescript: 5.6.3
 
   '@remix-run/cloudflare@2.14.0(@cloudflare/workers-types@4.20241112.0)(typescript@5.6.3)':
     dependencies:
