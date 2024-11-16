@@ -2,6 +2,7 @@
 name = "feature-sliced-design-example"
 pages_build_output_dir = "build/client"
 compatibility_date = "2024-09-29"
+main = "functions/index.js"
 
 [env]
 production = { }
