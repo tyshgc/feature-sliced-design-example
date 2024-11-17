@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit",
     "typegen": "wrangler types",
     "preview": "pnpm run build && wrangler pages dev",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,ts,tsx,css,json}": "biome check --apply",
