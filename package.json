@@ -8,6 +8,7 @@
     "check": "biome check \"**/*.{ts,tsx,js,jsx,md}\"",
     "deploy": "pnpm run build && wrangler pages deploy",
     "dev": "remix vite:dev --port 3001",
+    "fix": "biome fix \"**/*.{ts,tsx,js,jsx,md}\"",
     "format": "biome format --write \"**/*.{ts,tsx,js,jsx,md}\"",
     "lint": "biome lint \"**/*.{ts,tsx,js,jsx,md}\"",
     "start": "wrangler pages dev ./build/client",
