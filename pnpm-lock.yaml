@@ -44,16 +44,9 @@ importers:
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
-      tailwindcss:
-        specifier: ^3.4.15
-        version: 3.4.15
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.15)
-    optionalDependencies:
-      '@rollup/rollup-darwin-arm64':
-        specifier: ^4.27.2
-        version: 4.27.2
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20241112.0
@@ -64,15 +57,24 @@ importers:
       '@remix-run/node':
         specifier: ^2.14.0
         version: 2.14.0(typescript@5.6.3)
+      '@rollup/rollup-darwin-arm64':
+        specifier: ^4.27.2
+        version: 4.27.2
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.1
       biome:
         specifier: ^0.3.3
         version: 0.3.3
       rollup:
         specifier: ^4.27.2
         version: 4.27.2
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -979,6 +981,9 @@ packages:
 
   '@types/prop-types@15.7.13':
     resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
+
+  '@types/react-dom@18.3.1':
+    resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
 
   '@types/react@18.3.12':
     resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
@@ -4108,8 +4113,7 @@ snapshots:
   '@rollup/rollup-android-arm64@4.27.2':
     optional: true
 
-  '@rollup/rollup-darwin-arm64@4.27.2':
-    optional: true
+  '@rollup/rollup-darwin-arm64@4.27.2': {}
 
   '@rollup/rollup-darwin-x64@4.27.2':
     optional: true
@@ -4194,6 +4198,10 @@ snapshots:
 
   '@types/prop-types@15.7.13': {}
 
+  '@types/react-dom@18.3.1':
+    dependencies:
+      '@types/react': 18.3.12
+
   '@types/react@18.3.12':
     dependencies:
       '@types/prop-types': 15.7.13
@@ -4230,7 +4238,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.0)
       '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
       '@vanilla-extract/css': 1.16.0
-      esbuild: 0.17.19
+      esbuild: 0.17.6
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
