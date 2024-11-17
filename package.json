@@ -12,10 +12,14 @@
     "format": "biome format --write \"**/*.{ts,tsx,js,jsx,md}\"",
     "lint": "biome lint \"**/*.{ts,tsx,js,jsx,md}\"",
     "start": "wrangler pages dev ./build/client",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit",
     "typegen": "wrangler types",
     "preview": "pnpm run build && wrangler pages dev",
     "cf-typegen": "wrangler types"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,json}": "biome check --apply",
+    "*.{ts,tsx}": "tsc --noEmit"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241112.0",
@@ -25,6 +29,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "biome": "^0.3.3",
+    "lint-staged": "^15.2.10",
     "rollup": "^4.27.2",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3",
