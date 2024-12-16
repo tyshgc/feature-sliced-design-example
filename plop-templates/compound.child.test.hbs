@@ -1,0 +1,12 @@
+import "@testing-library/jest-dom"
+import { fireEvent, render, screen } from "@testing-library/react"
+import { expect, test, vi } from "vitest"
+
+import { {{pascalCase childName}} } from "./{{pascalCase childName}}"
+
+test("{{pascalCase rootName}}.{{pascalCase childName}}が表示されること", async () => {
+  render(<{{pascalCase childName}} />)
+
+  const element = document.querySelector('[data-{{layer}}="{{kebabCase rootName}}"][data-child="{{kebabCase childName}}"]')
+  expect(element).toBeInTheDocument()
+})

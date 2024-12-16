@@ -1,11 +1,11 @@
 {
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "app/**/.server/**/*.ts",
+    "app/**/.server/**/*.tsx",
+    "app/**/.client/**/*.ts",
+    "app/**/.client/**/*.tsx"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
@@ -24,11 +24,12 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "@routes/*": ["app/routes/*"],
-      "@entities/*": ["app/entities/*"],
-      "@features/*": ["app/features/*"],
-      "@shared/*": ["app/shared/*"],
-      "@widgets/*": ["app/widgets/*"]
+      "@routes/*": ["./app/routes/*"],
+      "@entities/*": ["./app/entities/*"],
+      "@features/*": ["./app/features/*"],
+      "@shared/*": ["./app/shared/*"],
+      "@widgets/*": ["./app/widgets/*"],
+      "@lib/*": ["./app/lib/*"]
     },
 
     // Vite takes care of building everything, not tsc.

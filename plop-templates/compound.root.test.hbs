@@ -1,0 +1,12 @@
+import "@testing-library/jest-dom"
+import { fireEvent, render, screen } from "@testing-library/react"
+import { expect, test, vi } from "vitest"
+
+import { {{pascalCase name}} } from "./index"
+
+test("{{pascalCase name}}が表示されること", async () => {
+  render(<{{pascalCase name}} />)
+
+  const element = document.querySelector('[data-entities="{{name}}"]')
+  expect(element).toBeInTheDocument()
+})

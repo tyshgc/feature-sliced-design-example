@@ -1,0 +1,24 @@
+import type { Meta, StoryObj } from "@storybook/react"
+import { {{pascalCase childName}}, type {{pascalCase childName}}Props } from "./{{pascalCase childName}}"
+
+const meta: Meta<typeof {{pascalCase childName}}> = {
+  title: "{{pascalCase layer}}/{{pascalCase rootName}}.{{pascalCase childName}}",
+  component: {{pascalCase childName}},
+}
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+const defaultArgs: {{pascalCase childName}}Props = {
+  children: "Children of {{pascalCase rootName}}.{{pascalCase childName}}",
+}
+
+export const Default: Story = {
+  args: defaultArgs,
+}
+
+export const ErrorStory: Story = {
+  args: {
+    ...Default.args,
+  },
+}
